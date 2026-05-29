@@ -1,0 +1,1149 @@
+/* ============================================
+   POOJAS PAGE — Premium Detailed Styles
+   6 Visually Distinct Spiritual Sections
+   Acharya Pandit Shubham Sharma Ji
+   ============================================ */
+
+/* ==================== PAGE HERO ==================== */
+.pj-page-hero {
+  position: relative;
+  padding: 160px 24px 90px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.pj-hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(107, 26, 26, 0.7) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(255, 111, 0, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 70%, rgba(212, 160, 23, 0.06) 0%, transparent 45%),
+    linear-gradient(180deg, #2D0A0A 0%, var(--dark-bg) 100%);
+}
+
+.pj-hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.pj-hero-accent-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--saffron) 50%, var(--gold) 80%, transparent);
+  z-index: 2;
+}
+
+.pj-hero-accent-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+  z-index: 2;
+}
+
+.pj-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.pj-hero-om {
+  font-size: 3.2rem;
+  color: var(--gold);
+  font-family: var(--font-hindi);
+  display: block;
+  margin-bottom: 10px;
+  text-shadow: 0 0 40px rgba(212, 160, 23, 0.5), 0 0 80px rgba(212, 160, 23, 0.2);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.pj-hero-mantra {
+  font-family: var(--font-hindi);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+  opacity: 0.65;
+}
+
+.pj-hero-title {
+  font-family: var(--font-hindi);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  text-shadow: 0 0 40px rgba(212, 160, 23, 0.2);
+}
+
+.pj-hero-subtitle {
+  font-family: var(--font-english-heading);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.pj-hero-desc {
+  font-family: var(--font-hindi);
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.pj-hero-desc-en {
+  font-family: var(--font-english-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 32px;
+  display: block;
+}
+
+/* Navigation Pills */
+.pj-hero-nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pj-pill {
+  padding: 10px 22px;
+  border-radius: 50px;
+  background: rgba(212, 160, 23, 0.08);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  color: var(--gold-light);
+  font-family: var(--font-hindi);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pj-pill:hover {
+  background: rgba(212, 160, 23, 0.18);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(212, 160, 23, 0.15);
+}
+
+
+/* ==================== SECTION BASE ==================== */
+.pj-section {
+  padding: 90px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section accent — top border */
+.pj-section-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+
+/* ==================== SECTION THEMES — Backgrounds & Accents ==================== */
+
+/* -- DEVI Theme: Crimson + Gold -- */
+.pj-theme-devi {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #1A0808 50%, var(--dark-bg) 100%);
+}
+.pj-accent-devi {
+  background: linear-gradient(90deg, transparent, #C41E3A 30%, #FF6F00 50%, #C41E3A 70%, transparent);
+}
+
+/* -- SHIVA Theme: Deep Indigo-Maroon -- */
+.pj-theme-shiva {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #0D0A1A 50%, var(--dark-bg) 100%);
+}
+.pj-accent-shiva {
+  background: linear-gradient(90deg, transparent, #4A6CF7 30%, var(--gold) 50%, #4A6CF7 70%, transparent);
+}
+
+/* -- BHAIRAV Theme: Dark Maroon + Fiery -- */
+.pj-theme-bhairav {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #1A0505 50%, var(--dark-bg) 100%);
+}
+.pj-accent-bhairav {
+  background: linear-gradient(90deg, transparent, #FF4500 30%, var(--saffron) 50%, #FF4500 70%, transparent);
+}
+
+/* -- PROSPERITY Theme: Warm Gold-Green -- */
+.pj-theme-prosperity {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #0A1A0D 50%, var(--dark-bg) 100%);
+}
+.pj-accent-prosperity {
+  background: linear-gradient(90deg, transparent, #2ECC71 30%, var(--gold) 50%, #2ECC71 70%, transparent);
+}
+
+/* -- STABILITY Theme: Earth Tones -- */
+.pj-theme-stability {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #1A150A 50%, var(--dark-bg) 100%);
+}
+.pj-accent-stability {
+  background: linear-gradient(90deg, transparent, #B8860B 30%, var(--gold) 50%, #B8860B 70%, transparent);
+}
+
+/* -- HARMONY Theme: Rose-Gold + Soft -- */
+.pj-theme-harmony {
+  background: linear-gradient(180deg, var(--dark-bg) 0%, #1A0D14 50%, var(--dark-bg) 100%);
+}
+.pj-accent-harmony {
+  background: linear-gradient(90deg, transparent, #E8A0BF 30%, var(--gold) 50%, #E8A0BF 70%, transparent);
+}
+
+
+/* ==================== TITLE BLOCK ==================== */
+.pj-title-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.pj-title-icon {
+  font-size: 2.8rem;
+  filter: drop-shadow(0 0 15px rgba(212, 160, 23, 0.3));
+  flex-shrink: 0;
+}
+
+.pj-title-wrap {
+  flex: 1;
+}
+
+.pj-title-hi {
+  font-family: var(--font-hindi);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.pj-title-en {
+  font-family: var(--font-english-heading);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.pj-title-tag {
+  padding: 8px 20px;
+  background: linear-gradient(135deg, rgba(255, 111, 0, 0.85), rgba(212, 160, 23, 0.85));
+  color: var(--white);
+  font-family: var(--font-hindi);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 50px;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 111, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.pj-tag-bhairav {
+  background: linear-gradient(135deg, #FF4500, #CC3700);
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.25);
+}
+
+.pj-tag-prosperity {
+  background: linear-gradient(135deg, #2ECC71, #1FA855);
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.25);
+}
+
+.pj-tag-stability {
+  background: linear-gradient(135deg, #B8860B, #996F00);
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.25);
+}
+
+.pj-tag-harmony {
+  background: linear-gradient(135deg, #E8A0BF, #D47FA6);
+  color: #1A0505;
+  box-shadow: 0 4px 15px rgba(232, 160, 191, 0.25);
+}
+
+
+/* ==================== OM DIVIDER ==================== */
+.pj-om-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.pj-div-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.3), transparent);
+}
+
+.pj-div-symbol {
+  font-size: 1.3rem;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+
+/* ==================== MAIN GRID ==================== */
+.pj-main-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 50px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.pj-grid-reverse {
+  grid-template-columns: 1fr 420px;
+}
+
+.pj-grid-reverse .pj-image-col {
+  order: 2;
+}
+
+.pj-grid-reverse .pj-content-col {
+  order: 1;
+}
+
+
+/* ==================== IMAGE FRAME ==================== */
+.pj-image-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(212, 160, 23, 0.15);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
+}
+
+.pj-image-frame:hover {
+  border-color: rgba(212, 160, 23, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 160, 23, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Theme-specific frame glows */
+.pj-frame-devi { border-color: rgba(196, 30, 58, 0.2); }
+.pj-frame-devi:hover { border-color: rgba(196, 30, 58, 0.4); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(196, 30, 58, 0.1); }
+
+.pj-frame-shiva { border-color: rgba(74, 108, 247, 0.15); }
+.pj-frame-shiva:hover { border-color: rgba(74, 108, 247, 0.35); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(74, 108, 247, 0.1); }
+
+.pj-frame-bhairav { border-color: rgba(255, 69, 0, 0.2); }
+.pj-frame-bhairav:hover { border-color: rgba(255, 69, 0, 0.4); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 69, 0, 0.1); }
+
+.pj-frame-prosperity { border-color: rgba(46, 204, 113, 0.15); }
+.pj-frame-prosperity:hover { border-color: rgba(46, 204, 113, 0.35); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(46, 204, 113, 0.08); }
+
+.pj-frame-stability { border-color: rgba(184, 134, 11, 0.2); }
+.pj-frame-stability:hover { border-color: rgba(184, 134, 11, 0.4); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(184, 134, 11, 0.08); }
+
+.pj-frame-harmony { border-color: rgba(232, 160, 191, 0.15); }
+.pj-frame-harmony:hover { border-color: rgba(232, 160, 191, 0.35); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(232, 160, 191, 0.08); }
+
+/* Frame corner ornaments */
+.pj-frame-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: var(--gold);
+  border-style: solid;
+  opacity: 0.35;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.pj-image-frame:hover .pj-frame-corner { opacity: 0.6; }
+
+.pj-fc-tl { top: 10px; left: 10px; border-width: 2px 0 0 2px; border-radius: 4px 0 0 0; }
+.pj-fc-tr { top: 10px; right: 10px; border-width: 2px 2px 0 0; border-radius: 0 4px 0 0; }
+.pj-fc-bl { bottom: 10px; left: 10px; border-width: 0 0 2px 2px; border-radius: 0 0 0 4px; }
+.pj-fc-br { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; border-radius: 0 0 4px 0; }
+
+/* Placeholder styling */
+.pj-img-placeholder {
+  width: 100%;
+  min-height: 380px;
+  background: linear-gradient(145deg, rgba(74, 14, 14, 0.5), rgba(42, 15, 15, 0.7));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+/* Theme-specific placeholder backgrounds */
+.pj-placeholder-bhairav { background: linear-gradient(145deg, rgba(50, 10, 5, 0.7), rgba(30, 5, 5, 0.9)); }
+.pj-placeholder-prosperity { background: linear-gradient(145deg, rgba(10, 40, 15, 0.5), rgba(10, 25, 15, 0.7)); }
+.pj-placeholder-stability { background: linear-gradient(145deg, rgba(40, 30, 10, 0.5), rgba(25, 20, 10, 0.7)); }
+.pj-placeholder-harmony { background: linear-gradient(145deg, rgba(40, 15, 25, 0.5), rgba(25, 10, 18, 0.7)); }
+
+.pj-img-icon {
+  font-size: 3.8rem;
+  filter: drop-shadow(0 0 20px rgba(212, 160, 23, 0.3));
+  transition: transform 0.6s ease;
+}
+
+.pj-image-frame:hover .pj-img-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.pj-img-label {
+  font-family: var(--font-english-body);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+.pj-img-label-hi {
+  font-family: var(--font-hindi);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.35;
+}
+
+/* Location Tag */
+.pj-location-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: rgba(212, 160, 23, 0.06);
+  border: 1px solid rgba(212, 160, 23, 0.1);
+  border-radius: 12px;
+}
+
+.pj-loc-icon { font-size: 1rem; }
+
+.pj-loc-text {
+  font-family: var(--font-hindi);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Bhairav location */
+.pj-loc-bhairav {
+  border-color: rgba(255, 69, 0, 0.15);
+  background: rgba(255, 69, 0, 0.05);
+}
+
+.pj-loc-prosperity {
+  border-color: rgba(46, 204, 113, 0.1);
+  background: rgba(46, 204, 113, 0.04);
+}
+
+.pj-loc-harmony {
+  border-color: rgba(232, 160, 191, 0.1);
+  background: rgba(232, 160, 191, 0.04);
+}
+
+
+/* ==================== INTRO CARD ==================== */
+.pj-intro-card {
+  margin-bottom: 28px;
+  padding: 24px 28px;
+  background: rgba(212, 160, 23, 0.04);
+  border-left: 3px solid rgba(212, 160, 23, 0.3);
+  border-radius: 0 16px 16px 0;
+}
+
+.pj-intro-harmony {
+  border-left-color: rgba(232, 160, 191, 0.35);
+  background: rgba(232, 160, 191, 0.04);
+}
+
+.pj-intro-hi {
+  font-family: var(--font-hindi);
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.95;
+  margin-bottom: 12px;
+}
+
+.pj-intro-en {
+  font-family: var(--font-english-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+
+/* ==================== MANTRA CARD (Shiva section) ==================== */
+.pj-mantra-card {
+  text-align: center;
+  padding: 24px 30px;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, rgba(74, 108, 247, 0.06), rgba(212, 160, 23, 0.06));
+  border: 1px solid rgba(74, 108, 247, 0.12);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pj-mantra-card::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(74, 108, 247, 0.06);
+  border-radius: 14px;
+}
+
+.pj-mantra-text {
+  font-family: var(--font-hindi);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-shadow: 0 0 30px rgba(212, 160, 23, 0.3);
+  margin-bottom: 6px;
+  letter-spacing: 3px;
+}
+
+.pj-mantra-meaning {
+  font-family: var(--font-english-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+
+/* ==================== WHY BLOCK ==================== */
+.pj-why-block {
+  margin-bottom: 28px;
+}
+
+.pj-block-title {
+  font-family: var(--font-hindi);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pj-bt-icon { font-size: 1.2rem; }
+
+.pj-bt-en {
+  font-family: var(--font-english-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Why Grid */
+.pj-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pj-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(212, 160, 23, 0.04);
+  border: 1px solid rgba(212, 160, 23, 0.08);
+  border-radius: 14px;
+  transition: all 0.35s ease;
+}
+
+.pj-why-item:hover {
+  background: rgba(212, 160, 23, 0.09);
+  border-color: rgba(212, 160, 23, 0.2);
+  transform: translateX(6px);
+}
+
+.pj-wi-bhairav {
+  border-color: rgba(255, 69, 0, 0.08);
+  background: rgba(255, 69, 0, 0.04);
+}
+.pj-wi-bhairav:hover {
+  border-color: rgba(255, 69, 0, 0.2);
+  background: rgba(255, 69, 0, 0.09);
+}
+
+.pj-wi-prosperity {
+  border-color: rgba(46, 204, 113, 0.08);
+  background: rgba(46, 204, 113, 0.03);
+}
+.pj-wi-prosperity:hover {
+  border-color: rgba(46, 204, 113, 0.2);
+  background: rgba(46, 204, 113, 0.08);
+}
+
+.pj-wi-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pj-wi-hi {
+  font-family: var(--font-hindi);
+  font-size: 0.92rem;
+  color: var(--text-light);
+  display: block;
+  line-height: 1.5;
+}
+
+.pj-wi-en {
+  font-family: var(--font-english-body);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+
+/* ==================== RITUAL CARD ==================== */
+.pj-ritual-card {
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.05), rgba(255, 111, 0, 0.03));
+  border: 1px solid rgba(212, 160, 23, 0.12);
+  border-radius: 16px;
+  margin-bottom: 8px;
+}
+
+.pj-ritual-devi {
+  border-color: rgba(196, 30, 58, 0.15);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.05), rgba(212, 160, 23, 0.03));
+}
+
+.pj-ritual-bhairav {
+  border-color: rgba(255, 69, 0, 0.15);
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.05), rgba(212, 160, 23, 0.03));
+}
+
+.pj-ritual-prosperity {
+  border-color: rgba(46, 204, 113, 0.12);
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.05), rgba(212, 160, 23, 0.03));
+}
+
+.pj-ritual-stability {
+  border-color: rgba(184, 134, 11, 0.15);
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.05), rgba(212, 160, 23, 0.03));
+}
+
+.pj-ritual-harmony {
+  border-color: rgba(232, 160, 191, 0.15);
+  background: linear-gradient(135deg, rgba(232, 160, 191, 0.05), rgba(212, 160, 23, 0.03));
+}
+
+.pj-ritual-title {
+  font-family: var(--font-hindi);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--saffron-light);
+  margin-bottom: 12px;
+}
+
+.pj-ritual-text {
+  font-family: var(--font-hindi);
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.pj-ritual-text-en {
+  font-family: var(--font-english-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-style: italic;
+}
+
+
+/* ==================== ABHISHEK GRID (Shiva section) ==================== */
+.pj-abhishek-grid {
+  margin-bottom: 50px;
+}
+
+.pj-abhishek-title {
+  font-family: var(--font-hindi);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.pj-abhi-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.pj-abhi-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 16px;
+  background: linear-gradient(145deg, rgba(74, 108, 247, 0.05), rgba(212, 160, 23, 0.04));
+  border: 1px solid rgba(74, 108, 247, 0.1);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.pj-abhi-card:hover {
+  background: linear-gradient(145deg, rgba(74, 108, 247, 0.1), rgba(212, 160, 23, 0.08));
+  border-color: rgba(74, 108, 247, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3), 0 0 20px rgba(74, 108, 247, 0.06);
+}
+
+.pj-abhi-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.pj-abhi-name-hi {
+  font-family: var(--font-hindi);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.pj-abhi-name-en {
+  font-family: var(--font-english-body);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.pj-abhi-result {
+  font-family: var(--font-hindi);
+  font-size: 0.85rem;
+  color: var(--saffron-light);
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(212, 160, 23, 0.12);
+  width: 100%;
+}
+
+
+/* ==================== HARMONY BENEFITS (Gauri Shankar) ==================== */
+.pj-harmony-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pj-hb-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, rgba(232, 160, 191, 0.05), rgba(212, 160, 23, 0.03));
+  border: 1px solid rgba(232, 160, 191, 0.1);
+  border-radius: 16px;
+  transition: all 0.35s ease;
+}
+
+.pj-hb-item:hover {
+  background: linear-gradient(135deg, rgba(232, 160, 191, 0.1), rgba(212, 160, 23, 0.06));
+  border-color: rgba(232, 160, 191, 0.25);
+  transform: translateX(8px);
+}
+
+.pj-hb-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(232, 160, 191, 0.08);
+  border-radius: 14px;
+}
+
+.pj-hb-content {
+  flex: 1;
+}
+
+.pj-hb-hi {
+  font-family: var(--font-hindi);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-light);
+  display: block;
+}
+
+.pj-hb-en {
+  font-family: var(--font-english-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+
+/* ==================== CTA STRIP ==================== */
+.pj-cta-strip {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 36px 0 0;
+  border-top: 1px solid rgba(212, 160, 23, 0.1);
+}
+
+/* CTA Buttons */
+.pj-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: var(--font-hindi);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.pj-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.pj-cta-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.pj-cta-primary {
+  background: linear-gradient(135deg, var(--saffron), var(--divine-orange));
+  color: var(--white);
+  box-shadow: 0 6px 24px rgba(255, 111, 0, 0.25);
+}
+.pj-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 36px rgba(255, 111, 0, 0.4);
+}
+
+.pj-cta-call {
+  background: linear-gradient(135deg, var(--deep-maroon), var(--maroon));
+  color: var(--white);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+}
+.pj-cta-call:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 160, 23, 0.4);
+}
+
+.pj-cta-wa {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: var(--white);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.2);
+}
+.pj-cta-wa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 36px rgba(37, 211, 102, 0.35);
+}
+
+.pj-cta-outline {
+  background: transparent;
+  color: var(--gold-light);
+  border: 2px solid rgba(212, 160, 23, 0.3);
+}
+.pj-cta-outline:hover {
+  background: rgba(212, 160, 23, 0.1);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+
+/* ==================== FINAL BANNER ==================== */
+.pj-final-banner {
+  position: relative;
+  padding: 80px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pj-banner-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(107, 26, 26, 0.5) 0%, transparent 60%),
+    linear-gradient(180deg, var(--dark-bg), var(--maroon-dark), var(--dark-bg));
+}
+
+.pj-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pj-banner-om {
+  font-size: 2.5rem;
+  color: var(--gold);
+  font-family: var(--font-hindi);
+  display: block;
+  margin-bottom: 12px;
+  text-shadow: 0 0 40px rgba(212, 160, 23, 0.5);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.pj-banner-title {
+  font-family: var(--font-hindi);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+
+.pj-banner-subtitle {
+  font-family: var(--font-english-heading);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.pj-banner-desc {
+  font-family: var(--font-hindi);
+  font-size: 1rem;
+  color: var(--text-light);
+  opacity: 0.85;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.pj-banner-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pj-cta-wa-big {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: var(--white);
+  padding: 16px 36px;
+  font-size: 1.02rem;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.25);
+}
+.pj-cta-wa-big:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+}
+
+.pj-cta-call-big {
+  background: linear-gradient(135deg, var(--saffron), var(--divine-orange));
+  color: var(--white);
+  padding: 16px 36px;
+  font-size: 1.02rem;
+  box-shadow: 0 8px 30px rgba(255, 111, 0, 0.25);
+}
+.pj-cta-call-big:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255, 111, 0, 0.4);
+}
+
+
+/* ============================================
+   RESPONSIVE — Poojas Page
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .pj-main-grid,
+  .pj-grid-reverse {
+    grid-template-columns: 360px 1fr;
+  }
+
+  .pj-grid-reverse {
+    grid-template-columns: 1fr 360px;
+  }
+
+  .pj-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pj-abhi-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pj-page-hero {
+    padding: 120px 20px 60px;
+    min-height: auto;
+  }
+
+  .pj-hero-title {
+    font-size: 2rem;
+  }
+
+  .pj-hero-om { font-size: 2.4rem; }
+
+  .pj-hero-nav-pills {
+    gap: 8px;
+  }
+
+  .pj-pill {
+    padding: 8px 16px;
+    font-size: 0.82rem;
+  }
+
+  .pj-section {
+    padding: 60px 0 50px;
+  }
+
+  .pj-main-grid,
+  .pj-grid-reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pj-grid-reverse .pj-image-col { order: 0; }
+  .pj-grid-reverse .pj-content-col { order: 0; }
+
+  .pj-title-block {
+    flex-wrap: wrap;
+  }
+
+  .pj-title-hi {
+    font-size: 1.8rem;
+  }
+
+  .pj-title-icon {
+    font-size: 2.2rem;
+  }
+
+  .pj-title-tag {
+    margin-top: 8px;
+    font-size: 0.72rem;
+    padding: 6px 14px;
+  }
+
+  .pj-img-placeholder {
+    min-height: 260px;
+  }
+
+  .pj-intro-card {
+    padding: 18px 20px;
+  }
+
+  .pj-abhi-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pj-cta-strip {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pj-cta-btn {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .pj-banner-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pj-cta-wa-big,
+  .pj-cta-call-big {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .pj-hb-item {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pj-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .pj-title-hi {
+    font-size: 1.5rem;
+  }
+
+  .pj-abhi-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pj-mantra-text {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .pj-why-item {
+    padding: 10px 12px;
+  }
+
+  .pj-wi-hi {
+    font-size: 0.85rem;
+  }
+
+  .pj-img-placeholder {
+    min-height: 220px;
+  }
+
+  .pj-img-icon {
+    font-size: 2.8rem;
+  }
+
+  .pj-hb-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+  }
+
+  .pj-banner-title {
+    font-size: 1.5rem;
+  }
+}

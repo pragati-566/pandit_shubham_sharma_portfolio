@@ -1,0 +1,804 @@
+/* ============================================
+   UNIVERSAL DETAIL SECTION
+   Premium Expandable Section — Matches Site Theme
+   ============================================ */
+
+/* --- Section Wrapper --- */
+.universal-detail-section {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.6s ease 0.2s;
+  background: linear-gradient(180deg,
+    var(--dark-surface) 0%,
+    var(--dark-bg) 8%,
+    var(--dark-bg) 92%,
+    var(--dark-surface) 100%
+  );
+  position: relative;
+}
+
+.universal-detail-section.expanded {
+  max-height: 8000px;
+  opacity: 1;
+  padding: 80px 0 100px;
+}
+
+/* Top separator glow line */
+.universal-detail-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--gold) 20%,
+    var(--saffron) 50%,
+    var(--gold) 80%,
+    transparent
+  );
+  opacity: 0.7;
+}
+
+/* Bottom separator glow line */
+.universal-detail-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--gold) 30%,
+    var(--saffron) 50%,
+    var(--gold) 70%,
+    transparent
+  );
+  opacity: 0.4;
+}
+
+/* --- Floating Particles Background --- */
+.ud-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ud-particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: udFloat linear infinite;
+}
+
+@keyframes udFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.5);
+  }
+  15% {
+    opacity: 0.4;
+  }
+  85% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) scale(1);
+  }
+}
+
+/* --- Close Button --- */
+.ud-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(212, 160, 23, 0.08);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  color: var(--gold);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  z-index: 10;
+}
+
+.ud-close-btn:hover {
+  background: rgba(212, 160, 23, 0.15);
+  border-color: var(--gold);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.2);
+}
+
+/* --- Inner Container --- */
+.ud-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Hero Banner --- */
+.ud-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.ud-hero-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(212, 160, 23, 0.15);
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 3;
+}
+
+.ud-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.6s ease;
+  filter: brightness(0.9) contrast(1.05);
+}
+
+.ud-hero-image:hover img {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.1);
+}
+
+/* Image overlay gradient */
+.ud-hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    transparent 50%,
+    rgba(26, 5, 5, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+/* Decorative inner border */
+.ud-hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(212, 160, 23, 0.1);
+  border-radius: 14px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ud-hero-content {
+  padding: 10px 0;
+}
+
+.ud-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(212, 160, 23, 0.08);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 50px;
+  font-family: var(--font-hindi);
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.ud-badge .badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 4px rgba(212, 160, 23, 0.3); }
+  50% { opacity: 1; box-shadow: 0 0 12px rgba(212, 160, 23, 0.6); }
+}
+
+.ud-main-title {
+  font-family: var(--font-hindi);
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1.3;
+  margin-bottom: 8px;
+  text-shadow: 0 0 30px rgba(212, 160, 23, 0.15);
+}
+
+.ud-english-title {
+  font-family: var(--font-english-heading);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.ud-description {
+  font-family: var(--font-hindi);
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 2;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+/* Mantra highlight box */
+.ud-mantra-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg,
+    rgba(107, 26, 26, 0.3),
+    rgba(74, 14, 14, 0.4)
+  );
+  border: 1px solid rgba(212, 160, 23, 0.15);
+  border-left: 3px solid var(--gold);
+  border-radius: 12px;
+  margin-bottom: 28px;
+  flex-direction: row;
+}
+
+.ud-mantra-box .mantra-om, .ud-mantra-box .mantra-om-top {
+  font-size: 2rem;
+  color: var(--gold);
+  font-family: var(--font-hindi);
+  text-shadow: 0 0 20px rgba(212, 160, 23, 0.5);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.ud-mantra-box .mantra-text, .ud-mantra-text {
+  font-family: var(--font-hindi);
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* CTA button row */
+.ud-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ud-cta-row .btn-primary,
+.ud-cta-row .btn-secondary {
+  padding: 14px 30px;
+  font-size: 0.95rem;
+}
+
+/* --- Section Divider with Title --- */
+.ud-section-divider {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.ud-section-divider .divider-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 10px rgba(212, 160, 23, 0.3));
+}
+
+.ud-section-divider .divider-title {
+  font-family: var(--font-hindi);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+  text-shadow: 0 0 25px rgba(212, 160, 23, 0.15);
+}
+
+.ud-section-divider .divider-subtitle {
+  font-family: var(--font-english-heading);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* --- Benefits (कारण) Grid --- */
+.ud-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.ud-benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(145deg, var(--dark-card), var(--dark-surface));
+  border: 1px solid rgba(212, 160, 23, 0.08);
+  border-radius: 16px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.ud-benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--saffron), var(--gold));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ud-benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 160, 23, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3),
+              0 0 30px rgba(212, 160, 23, 0.08);
+}
+
+.ud-benefit-card:hover::before {
+  opacity: 1;
+}
+
+.ud-benefit-card .benefit-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 160, 23, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 160, 23, 0.12);
+}
+
+.ud-benefit-card .benefit-text, .ud-benefit-card .benefit-desc {
+  font-family: var(--font-hindi);
+  font-size: 0.98rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.benefit-title {
+  font-family: var(--font-hindi);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+.benefit-title-en {
+  font-family: var(--font-english-heading);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* --- Abhishek Results (फल) Section --- */
+.ud-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.ud-result-card {
+  padding: 28px;
+  background: linear-gradient(145deg, var(--dark-card), var(--dark-surface));
+  border: 1px solid rgba(212, 160, 23, 0.08);
+  border-radius: 16px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.ud-result-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--saffron));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ud-result-card:hover {
+  transform: translateX(6px);
+  border-color: rgba(212, 160, 23, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
+              0 0 20px rgba(212, 160, 23, 0.06);
+}
+
+.ud-result-card:hover::after {
+  opacity: 1;
+}
+
+.ud-result-card .result-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.ud-result-card .result-icon, .remedy-icon {
+  font-size: 1.6rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 160, 23, 0.06);
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+.ud-result-card .result-substance, .remedy-title {
+  font-family: var(--font-hindi);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.ud-result-card .result-benefit, .remedy-desc {
+  font-family: var(--font-hindi);
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+/* --- Samagri (सामग्री) Section --- */
+.ud-samagri {
+  margin-bottom: 80px;
+}
+
+.ud-samagri-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* --- Bottom CTA --- */
+.ud-bottom-cta {
+  text-align: center;
+  padding: 50px 40px;
+  background: linear-gradient(145deg,
+    rgba(74, 14, 14, 0.4),
+    rgba(45, 10, 10, 0.6)
+  );
+  border: 1px solid rgba(212, 160, 23, 0.12);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ud-bottom-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--saffron), var(--gold));
+}
+
+.ud-bottom-cta .cta-mantra {
+  font-family: var(--font-hindi);
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+  text-shadow: 0 0 20px rgba(212, 160, 23, 0.3);
+  letter-spacing: 3px;
+}
+
+.ud-bottom-cta .cta-heading {
+  font-family: var(--font-hindi);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+
+.ud-bottom-cta .cta-english {
+  font-family: var(--font-english-heading);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.ud-bottom-cta .cta-desc {
+  font-family: var(--font-hindi);
+  font-size: 1rem;
+  color: var(--text-light);
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+}
+
+.ud-bottom-cta .cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Service card active state (when detail is open) --- */
+.service-card.sd-active {
+  border-color: rgba(212, 160, 23, 0.4) !important;
+  box-shadow: 0 0 40px rgba(212, 160, 23, 0.15),
+              0 20px 60px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-8px) !important;
+  position: relative;
+}
+
+.service-card.sd-active::after {
+  content: '▼';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(212, 160, 23, 0.5);
+  animation: udBounceArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes udBounceArrow {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(4px); }
+}
+
+/* --- Reveal animations for detail content --- */
+.ud-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ud-reveal.ud-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ud-reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ud-reveal-left.ud-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ud-reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ud-reveal-right.ud-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ud-reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.ud-reveal-scale.ud-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays for benefit/result cards */
+.ud-stagger-1 { transition-delay: 0.05s; }
+.ud-stagger-2 { transition-delay: 0.1s; }
+.ud-stagger-3 { transition-delay: 0.15s; }
+.ud-stagger-4 { transition-delay: 0.2s; }
+.ud-stagger-5 { transition-delay: 0.25s; }
+.ud-stagger-6 { transition-delay: 0.3s; }
+.ud-stagger-7 { transition-delay: 0.35s; }
+.ud-stagger-8 { transition-delay: 0.4s; }
+
+/* Custom MMJ Mantra */
+.ud-mantra-showcase {
+  margin-bottom: 80px;
+}
+.ud-mantra-box {
+  background: linear-gradient(145deg, rgba(74, 14, 14, 0.6), rgba(45, 10, 10, 0.8));
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 20px;
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+}
+.ud-mantra-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(212, 160, 23, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.mantra-label {
+  font-family: var(--font-hindi);
+  font-size: 1.2rem;
+  color: var(--gold-light);
+  margin-top: 10px;
+}
+.mantra-label-en {
+  font-family: var(--font-english-heading);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.ud-mantra-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+.ud-mantra-divider .line {
+  width: 40px; height: 1px; background: rgba(212, 160, 23, 0.3);
+}
+.ud-mantra-divider .dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+}
+
+
+/* ============================================
+   RESPONSIVE — UNIVERSAL
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .ud-hero {
+    gap: 40px;
+  }
+  .ud-main-title {
+    font-size: 2.2rem;
+  }
+  .ud-benefits-grid,
+  .ud-results-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .universal-detail-section.expanded {
+    padding: 60px 0 80px;
+  }
+  .ud-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .ud-hero-image {
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+  .ud-main-title {
+    font-size: 1.9rem;
+  }
+  .ud-description {
+    padding-right: 0;
+    font-size: 1rem;
+  }
+  .ud-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .ud-results-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .ud-section-divider .divider-title {
+    font-size: 1.6rem;
+  }
+  .ud-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ud-cta-row .btn-primary,
+  .ud-cta-row .btn-secondary {
+    justify-content: center;
+    text-align: center;
+  }
+  .ud-bottom-cta {
+    padding: 36px 20px;
+  }
+  .ud-bottom-cta .cta-heading {
+    font-size: 1.5rem;
+  }
+  .ud-bottom-cta .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ud-bottom-cta .cta-buttons .btn-primary,
+  .ud-bottom-cta .cta-buttons .btn-secondary {
+    justify-content: center;
+    text-align: center;
+  }
+  .ud-close-btn {
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  .samagri-chip {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .universal-detail-section.expanded {
+    padding: 50px 0 60px;
+  }
+  .ud-main-title {
+    font-size: 1.6rem;
+  }
+  .ud-badge {
+    font-size: 0.78rem;
+    padding: 6px 14px;
+  }
+  .ud-benefit-card {
+    padding: 18px;
+  }
+  .ud-result-card {
+    padding: 20px;
+  }
+  .ud-mantra-box {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .ud-mantra-box .mantra-om {
+    font-size: 1.5rem;
+  }
+  .ud-mantra-box .mantra-text {
+    font-size: 0.95rem;
+  }
+}
